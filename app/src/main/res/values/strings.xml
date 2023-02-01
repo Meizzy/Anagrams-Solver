@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Anagram Solver</string>
+    <string name="letter_word"> %s letter words</string>
+    <string name="error">no words to display</string>
+    <string name="title_activity_search">Search</string>
+    <string name="searchable_hint">Enter your word</string>
+    <string name="word_of_the_day">Word of the day</string>
+    <string name="ok">Okay</string>
+</resources>
