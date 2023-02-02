@@ -64,6 +64,7 @@ class SearchActivity : AppCompatActivity() {
         searchView?.setSearchableInfo(searchableInfo)
 
         searchView?.isIconified = false
+
         searchView?.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 Log.d(TAG, ".onQueryTextSubmit: called")

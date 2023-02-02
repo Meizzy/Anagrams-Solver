@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         binding.includeContentMain.tvSearch.setOnClickListener {
             Log.d(TAG, "setOnClickListener: clicked")
             val intent = Intent(this, SearchActivity::class.java)
+
             startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
 

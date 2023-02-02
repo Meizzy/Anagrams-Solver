@@ -5,5 +5,6 @@
     <string name="title_activity_search">Search</string>
     <string name="searchable_hint">Enter your word</string>
     <string name="word_of_the_day">Word of the day</string>
+    <string name="transition">transition</string>
     <string name="ok">Okay</string>
 </resources>
