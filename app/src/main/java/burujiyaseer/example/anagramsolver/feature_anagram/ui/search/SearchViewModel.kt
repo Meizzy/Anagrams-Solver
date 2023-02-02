@@ -35,12 +35,14 @@ class SearchViewModel @Inject constructor(private val repository: Repository) : 
 
         if (anagramWordsList is Resource.Success) {
             emptyWordsList.add(anagramWordsList.value)
-            val sortedWords = emptyWordsList[0].all.sortedBy { it.length }
+            val sortedWords = emptyWordsList[0].all //.sortedBy { it.length }
             val returnWords = sortedWords.groupBy { it.length }
             for ((key, value) in returnWords) {
-                emptySortedWordsList.add(key.toString())
-                val formattedValues = value.toString().replace("[", "").replace("]", "")
-                emptySortedWordsList.add(formattedValues)
+                if (key > 1) {
+                    emptySortedWordsList.add(key.toString())
+                    val formattedValues = value.toString().replace("[", "").replace("]", "")
+                    emptySortedWordsList.add(formattedValues)
+                }
             }
 //            Log.d(TAG, "list is $emptySortedWordsList")
             _anagramWordsLiveData.postValue(Resource.Success(emptySortedWordsList))
