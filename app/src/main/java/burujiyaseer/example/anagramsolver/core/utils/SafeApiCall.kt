@@ -1,7 +1,6 @@
-package burujiyaseer.example.anagramsolver.feature_anagram.data.network
+package burujiyaseer.example.anagramsolver.core.utils
 
 import android.util.Log
-import burujiyaseer.example.anagramsolver.core.utils.Resource
 import retrofit2.HttpException
 
 private const val TAG = "SafeApiCall"

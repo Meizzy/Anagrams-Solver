@@ -6,5 +6,9 @@
     <string name="searchable_hint">Enter your word</string>
     <string name="word_of_the_day">Word of the day</string>
     <string name="transition">transition</string>
+    <string name="wordle">Wordle</string>
+    <string name="dictionary">Dictionary</string>
     <string name="ok">Okay</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

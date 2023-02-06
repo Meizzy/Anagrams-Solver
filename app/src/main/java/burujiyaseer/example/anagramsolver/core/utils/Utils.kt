@@ -5,7 +5,7 @@ import android.view.View
 import burujiyaseer.example.anagramsolver.R
 import com.google.android.material.snackbar.Snackbar
 
-
+internal const val QUERY_TRANSFER = "QUERY_TRANSFER"
 fun View.visible(isVisible: Boolean) {
     visibility = if (isVisible) View.VISIBLE else View.GONE
 }
@@ -17,7 +17,7 @@ fun View.enable(enabled: Boolean) {
 
 fun Activity.snackBar(msg: String, action: (() -> Unit)? = null) {
     Snackbar.make(
-        findViewById(android.R.id.content), msg, Snackbar.LENGTH_LONG
+        findViewById(android.R.id.content), msg, Snackbar.LENGTH_INDEFINITE
     ).also {
         it.setAction(
             getString(R.string.ok)
