@@ -14,7 +14,7 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-private const val TAG = "SearchViewModel"
+//private const val TAG = "SearchViewModel"
 
 @HiltViewModel
 class SearchViewModel @Inject constructor(private val repository: Repository) : ViewModel() {
@@ -30,7 +30,7 @@ class SearchViewModel @Inject constructor(private val repository: Repository) : 
 
         val anagramWordsList = deferredAnagramsWordsList.await()
 
-        Log.d(TAG,"list of words found is $anagramWordsList" )
+//        Log.d(TAG,"list of words found is $anagramWordsList" )
         val emptyWordsList = mutableListOf<AnagramWords>()
         val emptySortedWordsList = mutableListOf<String>()
 

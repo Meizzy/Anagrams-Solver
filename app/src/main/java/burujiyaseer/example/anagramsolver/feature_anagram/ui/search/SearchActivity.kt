@@ -9,9 +9,7 @@ import android.widget.SearchView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
-import androidx.preference.PreferenceManager
 import burujiyaseer.example.anagramsolver.R
-import burujiyaseer.example.anagramsolver.core.utils.QUERY_TRANSFER
 import burujiyaseer.example.anagramsolver.databinding.ActivitySearchBinding
 import burujiyaseer.example.anagramsolver.feature_anagram.ui.PagerAdapter
 import com.google.android.material.tabs.TabLayoutMediator
@@ -53,9 +51,7 @@ class SearchActivity : AppCompatActivity() {
                 if ((query != null) && query.isNotEmpty()) {
                     Log.d(TAG, "query is $query")
                     viewModel.getAnagramsWordsList(query)
-                    val sharedPref =
-                        PreferenceManager.getDefaultSharedPreferences(applicationContext)
-                    sharedPref.edit().putString(QUERY_TRANSFER, query).apply()
+
                 }
                 return true
             }
@@ -96,11 +92,5 @@ class SearchActivity : AppCompatActivity() {
         }.attach()
     }
 
-    override fun onResume() {
-        Log.d(TAG,"onResume starts")
-        super.onResume()
-        Log.d(TAG,"onResume ends")
-
-    }
 
 }
