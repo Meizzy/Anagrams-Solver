@@ -5,7 +5,7 @@ import burujiyaseer.example.anagramsolver.feature_dictionary.domain.model.WordIn
 data class WordInfoDto(
     val meanings: List<MeaningDto>,
     val origin: String?,
-    val phonetic: String,
+    val phonetic: String?,
     val phonetics: List<PhoneticDto>,
     val word: String
 ){

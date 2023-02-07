@@ -5,5 +5,5 @@ import burujiyaseer.example.anagramsolver.feature_dictionary.domain.model.WordIn
 import kotlinx.coroutines.flow.Flow
 
 interface Repository {
-    fun getWordInfo(word: String): Flow<Resource<List<WordInfo>>>
+    suspend fun getWordInfo(word: String): Resource<List<WordInfo>>
 }

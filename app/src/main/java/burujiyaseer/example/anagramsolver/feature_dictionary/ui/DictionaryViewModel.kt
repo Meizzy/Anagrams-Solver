@@ -8,38 +8,27 @@ import burujiyaseer.example.anagramsolver.core.utils.Resource
 import burujiyaseer.example.anagramsolver.feature_dictionary.domain.model.WordInfo
 import burujiyaseer.example.anagramsolver.feature_dictionary.domain.repository.Repository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
-class DictionaryViewModel (private val repository: Repository) : ViewModel() {
-
-    private val delayTime = 500L
+private const val TAG = "DictionaryViewModel"
+@HiltViewModel
+class DictionaryViewModel @Inject constructor(private val repository: Repository) : ViewModel() {
 
     private val _searchedWordLiveData = MutableLiveData<Resource<List<WordInfo>>>()
     val searchedLiveData: LiveData<Resource<List<WordInfo>>>
         get() = _searchedWordLiveData
 
-    private var searchJob: Job? = null
-
-    fun onSearch(query: String) {
+    fun onSearch(query: String) = viewModelScope.launch {
         _searchedWordLiveData.postValue(Resource.Loading)
-        searchJob?.cancel()
 
-        searchJob = viewModelScope.launch {
-            delay(delayTime)
+        val searchedWord = withContext(Dispatchers.IO){ repository.getWordInfo(query)}
 
-            val searchedWord = repository.getWordInfo(query).onEach { result ->
-                when (result) {
-                    is Resource.Failure -> _searchedWordLiveData.value = result
-                    Resource.Loading -> _searchedWordLiveData.postValue(Resource.Loading)
-                    is Resource.Success -> _searchedWordLiveData.value = result
-                }
-            }
-            searchedWord.launchIn(this)
-        }
+        if (searchedWord is Resource.Success){
+            _searchedWordLiveData.postValue(searchedWord)
+        } else
+            _searchedWordLiveData.postValue(searchedWord as Resource.Failure)
     }
 }

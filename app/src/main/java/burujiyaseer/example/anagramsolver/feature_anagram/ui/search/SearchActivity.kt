@@ -12,6 +12,7 @@ import androidx.appcompat.content.res.AppCompatResources
 import burujiyaseer.example.anagramsolver.R
 import burujiyaseer.example.anagramsolver.databinding.ActivitySearchBinding
 import burujiyaseer.example.anagramsolver.feature_anagram.ui.PagerAdapter
+import burujiyaseer.example.anagramsolver.feature_dictionary.ui.DictionaryViewModel
 import com.google.android.material.tabs.TabLayoutMediator
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -23,6 +24,7 @@ class SearchActivity : AppCompatActivity() {
     private var searchView: SearchView? = null
     private lateinit var binding: ActivitySearchBinding
     private val viewModel: SearchViewModel by viewModels()
+    private val dictionaryViewModel: DictionaryViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,6 +53,7 @@ class SearchActivity : AppCompatActivity() {
                 if ((query != null) && query.isNotEmpty()) {
                     Log.d(TAG, "query is $query")
                     viewModel.getAnagramsWordsList(query)
+                    dictionaryViewModel.onSearch(query)
 
                 }
                 return true
