@@ -16,7 +16,9 @@ An app that returns a request from a remote API that solves your anagram puzzle 
 * RecyclerView (multiple viewType)
 
 # Screenshots
+![landingPage](https://user-images.githubusercontent.com/89424032/217400696-0085e926-02fc-4ace-afa1-fd919646301a.png)
 
-![landing_page](https://user-images.githubusercontent.com/89424032/216198992-6715ebdd-e236-43de-8f5d-779932c72774.png)
-![list_with_new_line](https://user-images.githubusercontent.com/89424032/216198998-c669311c-8cf9-4d14-9c7d-f99315f0fa75.png)
-![list_word](https://user-images.githubusercontent.com/89424032/216199003-28ffc375-ef3c-46d2-80f2-ed815b5e4097.png)
+https://user-images.githubusercontent.com/89424032/217400091-0ea3274a-c7c5-4487-b36c-aba96cdf5f8b.mp4
+
+![anagramTabLayout](https://user-images.githubusercontent.com/89424032/217400783-874e3784-0f5c-4a1b-ab06-bfdf032fc01b.png)
+
