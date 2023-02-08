@@ -13,7 +13,8 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
-private const val TAG = "DictionaryViewModel"
+//private const val TAG = "DictionaryViewModel"
+
 @HiltViewModel
 class DictionaryViewModel @Inject constructor(private val repository: Repository) : ViewModel() {
 
@@ -24,11 +25,10 @@ class DictionaryViewModel @Inject constructor(private val repository: Repository
     fun onSearch(query: String) = viewModelScope.launch {
         _searchedWordLiveData.postValue(Resource.Loading)
 
-        val searchedWord = withContext(Dispatchers.IO){ repository.getWordInfo(query)}
+        val searchedWord = withContext(Dispatchers.IO) { repository.getWordInfo(query) }
 
-        if (searchedWord is Resource.Success){
+        if (searchedWord is Resource.Success) {
             _searchedWordLiveData.postValue(searchedWord)
-        } else
-            _searchedWordLiveData.postValue(searchedWord as Resource.Failure)
+        } else _searchedWordLiveData.postValue(searchedWord as Resource.Failure)
     }
 }

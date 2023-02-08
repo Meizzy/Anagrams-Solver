@@ -1,10 +1,8 @@
 package burujiyaseer.example.anagramsolver.feature_dictionary.ui
 
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.activityViewModels
 import burujiyaseer.example.anagramsolver.R
 import burujiyaseer.example.anagramsolver.core.base.BaseFragment

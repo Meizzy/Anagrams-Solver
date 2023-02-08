@@ -1,5 +1,5 @@
 # Anagrams-Solver
-An app that returns a request from a remote API that solves your anagram puzzle with all the possible combination of words.
+An app that returns a request from a remote API that solves your anagram puzzle with all the possible combination of words, and also an option to search the english dictionary.
 
 ## Technologies used:
 * Kotlin
@@ -10,6 +10,8 @@ An app that returns a request from a remote API that solves your anagram puzzle 
 * Material Design (Google)
 * SearchView
 * Anagramica API
+* Dictionary API
+* Dagger Hilt
 * Retrofit2
 * RecyclerView (multiple viewType)
 

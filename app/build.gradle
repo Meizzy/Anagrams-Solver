@@ -72,6 +72,4 @@ dependencies {
     //viewPager2
     implementation("androidx.viewpager2:viewpager2:1.0.0")
 
-    //sharedPreferences
-    implementation 'androidx.preference:preference-ktx:1.2.0'
 }
