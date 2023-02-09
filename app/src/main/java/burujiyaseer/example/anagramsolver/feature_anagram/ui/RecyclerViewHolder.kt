@@ -7,7 +7,7 @@ import burujiyaseer.example.anagramsolver.R
 import burujiyaseer.example.anagramsolver.databinding.ItemContentBinding
 import burujiyaseer.example.anagramsolver.databinding.ItemTitleBinding
 
-sealed class RecyclerViewHolder(private val binding: ViewBinding) :
+sealed class RecyclerViewHolder(binding: ViewBinding) :
     RecyclerView.ViewHolder(binding.root) {
 
     class TitleViewHolder(private val binding: ItemTitleBinding) : RecyclerViewHolder(binding) {
