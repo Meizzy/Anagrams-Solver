@@ -1,0 +1,41 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_STACK_OVERFLOW (0xc00000fd) at pc=0x00007ffda8c13e98, pid=2196, tid=9180
+#
+# JRE version: OpenJDK Runtime Environment (11.0.13) (build 11.0.13+0-b1751.21-8125866)
+# Java VM: OpenJDK 64-Bit Server VM (11.0.13+0-b1751.21-8125866, mixed mode, tiered, compressed oops, g1 gc, windows-amd64)
+# Problematic frame:
+# V  [jvm.dll+0x773e98]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: org.jetbrains.kotlin.cli.jvm.K2JVMCompiler @C:\Users\AAA\AndroidStudioProjects\AnagramSolver\app\build\20230210_10727299441644092308.compiler.options
+
+Host: Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz, 12 cores, 15G,  Windows 10 , 64 bit Build 19041 (10.0.19041.2364)
+Time: Fri Feb 10 02:31:35 2023 Russia TZ 2 Standard Time elapsed time: 0.127249 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001c46d986800):  JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=9180, stack(0x0000004bed000000,0x0000004bed100000)]
+
+
+Current CompileTask:
+C2:    127  113   !   4       java.util.zip.ZipFile$Source::checkUTF8 (43 bytes)
+
+Stack: [0x0000004bed000000,0x0000004bed100000],  sp=0x0000004bed0fda20,  free space=1014k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x773e98]
+V  [jvm.dll+0x204015]
+V  [jvm.dll+0x2023c2]
+V  [jvm.dll+0x188e01]
+V  [jvm.dll+0x21106b]
+V  [jvm.dll+0x20f8c1]
+V  [jvm.dll+0x70de0f]
+V  [jvm.dll+0x706a75]

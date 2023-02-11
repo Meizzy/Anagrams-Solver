@@ -23,4 +23,8 @@ abstract class BaseFragment<VB : ViewBinding>(
         if (_binding == null) throw IllegalArgumentException("Binding cannot be null")
         return binding.root
     }
+    override fun onDestroyView(){
+        super.onDestroyView()
+        _binding = null
+    }
 }

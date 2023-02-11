@@ -17,6 +17,15 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".feature_wordle.ui.WordleActivity"
+            android:exported="false"
+            android:label="@string/wordle"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".feature_anagram.ui.search.SearchActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity">

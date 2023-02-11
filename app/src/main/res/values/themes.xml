@@ -16,6 +16,7 @@
         <item name="android:windowExitTransition">@transition/transition</item>
         <item name="android:windowBackground">@color/md_grey_900</item>
         <item name="actionBarTabBarStyle">@style/Widget.Design.TabLayout</item>
+        <item name="android:windowTranslucentStatus">true</item>
     </style>
 
     <style name="card_view_style">
@@ -30,5 +31,9 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.AnagramSolver.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.AnagramSolver.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

@@ -9,7 +9,24 @@
     <string name="wordle">Wordle</string>
     <string name="dictionary">Dictionary</string>
     <string name="ok">Okay</string>
-    <string name="empty"/>
+    <string name="empty" />
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="an_icon_for_the_wordle_game">An icon for the wordle game</string>
+    <string name="enter_btn">Enter</string>
+    <string name="refresh_btn">Refresh</string>
+    <string name="dialog_start_game">Play again?</string>
+    <string name="start">Play</string>
+    <string name="cancel">Exit</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
 </resources>
