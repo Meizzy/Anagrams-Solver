@@ -5,20 +5,15 @@
         android:checkableBehavior="single">
         <item
             android:id="@+id/mnu_search"
-            android:icon="@android:drawable/ic_menu_search"
+            android:icon="@drawable/ic_outline_search_24"
             android:title="@string/title_activity_search"/>
         <item
             android:id="@+id/mnu_wordle"
-            android:icon="@drawable/my_logo"
-            android:title="@string/wordle"
-            android:checked="true" />
+            android:icon="@drawable/green_logo"
+            android:title="@string/wordle" />
         <item
             android:id="@+id/mnu_word_of_the_day"
-            android:icon="@drawable/green_logo"
+            android:icon="@drawable/my_logo"
             android:title="@string/word_of_the_day" />
-        <item
-            android:id="@+id/mnu_dictionary"
-            android:icon="@drawable/ic_round_menu_book_24"
-            android:title="@string/dictionary" />
     </group>
 </menu>

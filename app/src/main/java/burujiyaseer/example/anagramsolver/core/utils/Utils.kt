@@ -16,7 +16,7 @@ fun View.enable(enabled: Boolean) {
 
 fun Activity.snackBar(msg: String, action: (() -> Unit)? = null) {
     Snackbar.make(
-        findViewById(android.R.id.content), msg, Snackbar.LENGTH_INDEFINITE
+        findViewById(android.R.id.content), msg, Snackbar.LENGTH_LONG
     ).also {
         it.setAction(
             getString(R.string.ok)

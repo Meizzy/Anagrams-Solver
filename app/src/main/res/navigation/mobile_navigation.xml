@@ -9,6 +9,26 @@
         android:id="@+id/nav_main"
         android:name="burujiyaseer.example.anagramsolver.MainFragment"
         android:label="@string/app_name"
-        tools:layout="@layout/fragment_main" />
-
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_nav_main_to_nav_wordle"
+            app:destination="@id/nav_wordle" />
+        <action
+            android:id="@+id/action_nav_main_to_nav_word_of_the_day"
+            app:destination="@id/nav_word_of_the_day" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_wordle"
+        android:name="burujiyaseer.example.anagramsolver.feature_wordle.ui.WordleFragment"
+        android:label="@string/wordle"
+        tools:layout="@layout/fragment_wordle">
+        <action
+            android:id="@+id/action_nav_wordle_to_nav_main"
+            app:destination="@id/nav_main" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_word_of_the_day"
+        android:name="burujiyaseer.example.anagramsolver.feature_wordle.ui.WordDailyFragment"
+        android:label="@string/word_of_the_day"
+        tools:layout="@layout/fragment_word_of_the_day"/>
 </navigation>

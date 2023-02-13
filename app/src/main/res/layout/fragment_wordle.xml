@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/inputLayout"
@@ -588,7 +587,7 @@
             android:layout_gravity="center"
             android:layout_margin="8dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/md_brown_500"
+            android:backgroundTint="@color/md_green_200"
             android:text="@string/enter_btn" />
 
         <Button
@@ -598,7 +597,7 @@
             android:layout_gravity="center"
             android:layout_margin="8dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/md_brown_500"
+            android:backgroundTint="@color/md_green_200"
             android:text="@string/refresh_btn" />
     </LinearLayout>
 

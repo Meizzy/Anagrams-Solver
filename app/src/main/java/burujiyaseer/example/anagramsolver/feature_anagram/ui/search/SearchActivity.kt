@@ -31,7 +31,8 @@ class SearchActivity : AppCompatActivity() {
 
         binding = ActivitySearchBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        setSupportActionBar(binding.includeSearch.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         tabLayoutSetup()
     }
 
